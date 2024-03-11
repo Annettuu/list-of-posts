@@ -51,7 +51,7 @@ onBeforeMount(() => {
 <template>
   <div class="main-page">
     <VSearch @input="(value) => (filter = value)" mode="lowerCase" class="sticky top-2"/>
-    <div class="main-page_container grid gap-4 mt-2">
+    <section class="main-page_container grid gap-4 mt-2">
       <VPost
           v-for="post of filteredPosts"
           :key="post.id"
@@ -59,7 +59,7 @@ onBeforeMount(() => {
           :body="post.body"
           :author="post.author"
       />
-    </div>
+    </section>
   </div>
 </template>
 
